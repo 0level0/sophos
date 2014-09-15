@@ -1,0 +1,27 @@
+<h1>Listing multimedia_types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Media type</th>
+      <th>Media format</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @multimedium_types.each do |multimedia_type| %>
+      <tr>
+        <td><%= multimedia_type.media_type %></td>
+        <td><%= multimedia_type.media_format %></td>
+        <td><%= link_to 'Show', multimedia_type %></td>
+        <td><%= link_to 'Edit', edit_multimedia_type_path(multimedia_type) %></td>
+        <td><%= link_to 'Destroy', multimedia_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Multimedia type', new_multimedia_type_path %>

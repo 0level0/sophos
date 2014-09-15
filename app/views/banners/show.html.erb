@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Server image url:</strong>
+  <%= @banner.server_image_url %>
+</p>
+
+<p>
+  <strong>associated link:</strong>
+  <%= @banner.associated_link %>
+</p>
+
+<%= link_to 'Edit', edit_banner_path(@banner) %> |
+<%= link_to 'Back', banners_path %>

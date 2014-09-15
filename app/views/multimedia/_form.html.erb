@@ -1,0 +1,21 @@
+<%= simple_form_for(@multimedium,html:{class:'form-horizontal'}) do |f| %>
+  <% if @multimedium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@multimedium.errors.count, "error") %> prohibited this multimedium from being saved:</h2>
+
+      <ul>
+      <% @multimedium.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :server_location %><br>
+    <%= f.text_field :server_location %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

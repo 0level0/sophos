@@ -1,0 +1,26 @@
+<%= simple_form_for(@banner,html: {class:'form-horizontal'}) do |f| %>
+  <% if @banner.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@banner.errors.count, "error") %> prohibited this banner from being saved:</h2>
+
+      <ul>
+      <% @banner.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%#= f.input @banner.associated_link%>
+    <%#= f.label :server_image_url %><br>
+    <%= f.input :server_image_url %>
+  </div>
+  <div class="field">
+    <%= f.label :associated_link %><br>
+    <%= f.text_field :associated_link %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

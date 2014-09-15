@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Media type:</strong>
+  <%= @multimedium_type.media_type %>
+</p>
+
+<p>
+  <strong>Media format:</strong>
+  <%= @multimedium_type.media_format %>
+</p>
+
+<%= link_to 'Edit', edit_multimedia_type_path(@multimedium_type) %> |
+<%= link_to 'Back', multimedia_types_path %>
